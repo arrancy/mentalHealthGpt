@@ -44,6 +44,14 @@ mentalHealthGPT is a free, AI-powered platform that provides mental health advic
 1. **Clone the Repository**
 
    ```bash
-   git clone https://github.com/yourusername/mentalHealthGPT.git
+   git clone https://github.com/arrancy/mentalHealthGPT.git
    cd mentalHealthGPT
+   cd server
+   npm i
+   npm run dev
+   -- now open another terminal window
+   cd ../client
+   npm i
+   npm run dev
+
    ```
