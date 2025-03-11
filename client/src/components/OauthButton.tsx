@@ -4,7 +4,7 @@ export function OauthButton() {
       <button
         className="gsi-material-button font-semibold border-2 border-sky-900 p-3 rounded-3xl hover:bg-sky-900 hover:text-sky-300 transition-all ease-in-out duration-300 mt-2"
         onClick={() => {
-          window.location.href = "http://localhost:4000/auth/google";
+          window.location.href = "https://api.helpmymind.tech/auth/google";
         }}
       >
         <div className="gsi-material-button-state "></div>

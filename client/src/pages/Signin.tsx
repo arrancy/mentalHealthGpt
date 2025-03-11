@@ -91,7 +91,7 @@ export function Signin() {
                 try {
                   const requestBody = JSON.stringify(signinInput);
                   const response = await fetch(
-                    "http://localhost:4000/user/signin",
+                    "https://api.helpmymind.tech/user/signin",
                     {
                       method: "POST",
                       body: requestBody,

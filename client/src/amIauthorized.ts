@@ -1,6 +1,6 @@
 export async function amIAuthorized() {
   try {
-    const response = await fetch("http://localhost:4000/me", {
+    const response = await fetch("https://api.helpmymind.tech/me", {
       credentials: "include",
       headers: { "authorization": "Bearer " + localStorage.getItem("jwt") },
     });

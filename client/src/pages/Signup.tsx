@@ -90,7 +90,7 @@ export function Signup() {
                   const requestBody = JSON.stringify(signupInput);
                   console.log(signupInput);
                   const response = await fetch(
-                    "http://localhost:4000/user/signup",
+                    "https://api.helpmymind.tech/user/signup",
                     {
                       method: "POST",
                       body: requestBody,

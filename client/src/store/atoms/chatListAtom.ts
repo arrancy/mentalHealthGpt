@@ -8,10 +8,13 @@ export const chatListAtom = atom<ChatObject[] | string>({
   default: selector({
     key: "chatListSelector",
     get: async () => {
-      const response = await fetch("http://localhost:4000/chat/getChats", {
-        credentials: "include",
-        headers: { authorization: "Bearer " + localStorage.getItem("jwt") },
-      });
+      const response = await fetch(
+        "https://api.helpmymind.tech/chat/getChats",
+        {
+          credentials: "include",
+          headers: { authorization: "Bearer " + localStorage.getItem("jwt") },
+        }
+      );
 
       const data = await response.json();
       if (!data.chats) {

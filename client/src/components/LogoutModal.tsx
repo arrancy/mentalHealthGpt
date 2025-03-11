@@ -30,7 +30,7 @@ export function LogoutModal() {
               <button
                 onClick={async () => {
                   const response = await fetch(
-                    "http://localhost:4000/user/logout",
+                    "https://api.helpmymind.tech/user/logout",
                     {
                       credentials: "include",
                       method: "POST",

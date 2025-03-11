@@ -71,7 +71,7 @@ export function TextInputArea() {
                       }
 
                       const response = await fetch(
-                        "http://localhost:4000/chat/newChat",
+                        "https://api.helpmymind.tech/chat/newChat",
                         {
                           method: "POST",
                           credentials: "include",
@@ -153,7 +153,7 @@ export function TextInputArea() {
                         setHasChatHistorySetManually(true);
                       }
                       const response = await fetch(
-                        "http://localhost:4000/chat/continueChat?chatId=" +
+                        "https://api.helpmymind.tech/chat/continueChat?chatId=" +
                           ifActiveChat.key,
                         {
                           method: "POST",

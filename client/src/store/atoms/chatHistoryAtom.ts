@@ -18,7 +18,7 @@ export const getChatHistory = async (
   key: number
 ): Promise<ChatHistoryObject[]> => {
   const response = await fetch(
-    "http://localhost:4000/chat/getChatHistory?chatId=" + key,
+    "https://api.helpmymind.tech/chat/getChatHistory?chatId=" + key,
     {
       credentials: "include",
       headers: {
