@@ -23,7 +23,7 @@ if (!DATABASE_URL) {
 export const db = drizzle(DATABASE_URL, { schema });
 
 const app = express();
-app.use(cors({ origin: "http://localhost:5173", credentials: true }));
+app.use(cors({ origin: "https://helpmymind.tech", credentials: true }));
 
 app.use(
   session({ secret: SESSION_SECRET, resave: false, saveUninitialized: false })
@@ -52,7 +52,7 @@ app.get(
 app.get("/protected", isLoggedIn, (req: Request, res: Response) => {
   const newReq = req as CustomRequest;
   console.log(newReq.user);
-  res.redirect("http://localhost:5173/dashboard");
+  res.redirect("https://helpmymind.tech/dashboard");
   // res.send(`Hello ${newReq.user}`);
 });
 app.get("/me", isLoggedIn, (req: Request, res: Response) => {
