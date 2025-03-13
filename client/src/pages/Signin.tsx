@@ -87,6 +87,9 @@ export function Signin() {
             <Button
               label={isWaiting ? <LoadingSpinner></LoadingSpinner> : "sign in"}
               onClick={async () => {
+                if (!(signinInput.email || signinInput.password)) {
+                  return setErrorMessage("incomplete information");
+                }
                 setIsWaiting(true);
                 try {
                   const requestBody = JSON.stringify(signinInput);
@@ -102,6 +105,7 @@ export function Signin() {
                   );
                   if (!response.ok) {
                     const data = await response.json();
+                    setIsWaiting(false);
                     return setErrorMessage(data.msg);
                   }
                   const data = await response.json();

@@ -85,10 +85,12 @@ export function Signup() {
             <Button
               label={isWaiting ? <LoadingSpinner></LoadingSpinner> : "Sign Up"}
               onClick={async () => {
+                if (!Object.values(signupInput).every((value) => !value)) {
+                  return setErrorMessage("please fill up your details");
+                }
                 setIsWaiting(true);
                 try {
                   const requestBody = JSON.stringify(signupInput);
-                  console.log(signupInput);
                   const response = await fetch(
                     "https://api.helpmymind.tech/user/signup",
                     {

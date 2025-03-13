@@ -41,7 +41,7 @@ export function TextInputArea() {
             }}
           ></MessageInputField>
           <Button
-            label={"send"}
+            label={window.innerWidth > 768 ? "send" : ">"}
             onClick={
               ifNewChat
                 ? async () => {
